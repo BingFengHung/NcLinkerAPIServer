@@ -1,11 +1,10 @@
 import express from 'express';
-import { createAdder } from './routerAdder';
-import { NCConnect } from '../interfaces/NCConnect';
-import { DsGetCoordOffset } from '../interfaces/DsGetCoordOffset';
+import { DsGetCoordOffsetController } from '../controllers/DsGetCoordOffsetController';
+import { NCConnectController } from '../controllers/NCConnectController';
+import { RouterCreator } from './RouterCreator';
 
 const router = express.Router();
 
-router.use('/NCConnect', createAdder<NCConnect>('NCConnect') );
-router.use('/DsGetCoordOffset', createAdder<DsGetCoordOffset>('DsGetCoordOffset')); 
-
+router.use('/NCConnect', RouterCreator(new NCConnectController()));
+router.use('/DsGetCoordOffset', RouterCreator(new DsGetCoordOffsetController())); 
 export default router; 

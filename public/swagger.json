@@ -6,14 +6,42 @@
 		"requestBodies": {},
 		"responses": {},
 		"schemas": {
-			"PingResponse": {
+			"DsGetCoordOffset": {
 				"properties": {
-					"message": {
-						"type": "string"
+					"gn": {
+						"type": "number",
+						"format": "double"
+					},
+					"oset": {
+						"type": "number",
+						"format": "double"
+					},
+					"axisFlag": {
+						"type": "number",
+						"format": "double"
 					}
 				},
 				"required": [
-					"message"
+					"gn",
+					"oset",
+					"axisFlag"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"NCConnect": {
+				"properties": {
+					"ip": {
+						"type": "string"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"ip",
+					"return"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -31,16 +59,16 @@
 	},
 	"openapi": "3.0.0",
 	"paths": {
-		"/ping": {
+		"/DsGetCoordOffset": {
 			"get": {
-				"operationId": "GetMessage",
+				"operationId": "Get",
 				"responses": {
 					"200": {
 						"description": "Ok",
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/PingResponse"
+									"$ref": "#/components/schemas/DsGetCoordOffset"
 								}
 							}
 						}
@@ -48,6 +76,79 @@
 				},
 				"security": [],
 				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsGetCoordOffset"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/NCConnect": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/NCConnect"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/NCConnect"
+							}
+						}
+					}
+				}
 			}
 		}
 	},

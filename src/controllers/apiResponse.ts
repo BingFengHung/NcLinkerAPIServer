@@ -10,7 +10,6 @@ export default class Responser {
   }
 
   public load() { 
-    console.log(this.fullPath);
     const data = fs.readFileSync(this.fullPath, 'utf8'); 
     return JSON.parse(data);
   }
