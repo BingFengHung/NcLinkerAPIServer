@@ -14,7 +14,6 @@ class Creator<T> {
   }
 
   public put  = async (req: any, res: any) => { 
-    console.log(req);
     const query = JSON.parse(JSON.stringify(req.body)); 
     const response = await this.controller.set({...query }); 
     res.send(response);
