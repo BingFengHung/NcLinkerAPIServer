@@ -1,4 +1,4 @@
-import {Body, Get, Put} from "tsoa";
+import {Body } from "tsoa";
 import Responser from "./apiResponse";
 
 export abstract class BaseController<T> {

@@ -45,6 +45,53 @@
 				],
 				"type": "object",
 				"additionalProperties": false
+			},
+			"DsGetCoordOffsetBatch": {
+				"properties": {
+					"gn": {
+						"type": "number",
+						"format": "double"
+					},
+					"oset": {
+						"items": {
+							"type": "number",
+							"format": "double"
+						},
+						"type": "array"
+					},
+					"axisFlag": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"gn",
+					"oset",
+					"axisFlag"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetNCPLC": {
+				"properties": {
+					"type": {
+						"type": "string"
+					},
+					"no": {
+						"type": "number",
+						"format": "double"
+					},
+					"v": {
+						"type": "boolean"
+					}
+				},
+				"required": [
+					"type",
+					"no",
+					"v"
+				],
+				"type": "object",
+				"additionalProperties": false
 			}
 		},
 		"securitySchemes": {}
@@ -145,6 +192,98 @@
 						"application/json": {
 							"schema": {
 								"$ref": "#/components/schemas/NCConnect"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/DsGetCoordOffsetBatch": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DsGetCoordOffsetBatch"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsGetCoordOffsetBatch"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/GetNCPLC": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/GetNCPLC"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/GetNCPLC"
 							}
 						}
 					}
