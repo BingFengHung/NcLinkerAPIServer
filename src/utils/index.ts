@@ -12,7 +12,7 @@ import { DsSetWorkPieceExt } from '../interfaces/DsSetWorkPieceExt';
 create<NCConnect>("NCConnect.json", { ip: "127.0.0.1", return: 0});
 create<GetNCPLC>("GetNCPLC.json", { type: "XUAA4", no: 0, v: false, return: 0});
 create<DsGetCoordOffsetBatch>("DsGetCoordOffsetBatch.json", { gn: 7, oset: [1, 2, 3, 4, 5, 6, 7], axisFlag: 0 })
-create<DsGetCoordOffset>("DsGetCoordOffset.json", { gn: 7, oset: 1.11, axisFlag: 0 });
+create<DsGetCoordOffset>("DsGetCoordOffset.json", { gn: 7, oset: [1.11, 2.2, 3.3], axisFlag: 0 });
 create<DsGetWorkPieceExt>("DsGetWrokPieceExt.json", { Ost: [1, 2, 3], axisFlag: 3, return: 0 });
 create<DsGetWorkPieceG92>("DsGetWorkPieceG92.json", { Ost: [1, 2, 3], axis: 3, return: 0 });
 create<DsSetCoordOffset>("DsSetCoordOffset.json", { gn: 7, oset: 0, axisFlag: 3, return: 0 });
