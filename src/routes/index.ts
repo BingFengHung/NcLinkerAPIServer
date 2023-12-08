@@ -13,7 +13,7 @@ const router = express.Router();
 
 router.use('/NCConnect', RouterCreator(new NCConnectController()));
 router.use('/DsGetCoordOffset', RouterCreator(new DsGetCoordOffsetController())); 
-router.use('/DsGetCoordBatchOffset', RouterCreator(new DsGetCoordOffsetBatchController())); 
+router.use('/DsGetCoordOffsetBatch', RouterCreator(new DsGetCoordOffsetBatchController())); 
 router.use('/GetNCPLC', RouterCreator(new GetNCPLCController())); 
 router.use('/DsGetWorkPieceExt', RouterCreator(new DsGetWorkPieceExtController())); 
 router.use('/DsGetWorkPieceG92', RouterCreator(new DsGetWorkPieceG92Controller())); 
