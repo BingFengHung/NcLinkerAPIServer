@@ -1,12 +1,12 @@
 import fs from 'fs';
 import path from 'path';
+import { basePath } from '../utils/basePath';
 
 export default class Responser { 
   fullPath: string;
 
   constructor(filename: string) {
-    this.fullPath = path.join(__dirname, `../data/${filename}.json`);
-    console.log(this.fullPath);
+    this.fullPath = path.join(basePath, `data/${filename}.json`);
   }
 
   public load() { 

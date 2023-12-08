@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "bin": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
     "predev": "pnpm run swagger",
@@ -11,7 +10,7 @@
     "build": "tsc",
     "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec\"",
     "swagger": "tsoa spec",
-    "pkg": "pkg package.json -o NcLinkerAPIServer"
+    "pkg": "pkg -t node18-win-x64 -o NcLinkerAPIServer dist/index.js"
   },
   "nodemonConfig": {
     "watch": [
@@ -19,11 +18,6 @@
     ],
     "ext": "ts",
     "exec": "ts-node src/index.ts"
-  },
-  "pkg": {
-    "assets": "public/**/*",
-    "targets": [ "node18-win-x64" ],
-    "outputPath": "release"
   },
   "keywords": [],
   "author": "",
