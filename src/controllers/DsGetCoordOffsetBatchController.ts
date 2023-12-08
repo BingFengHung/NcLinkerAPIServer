@@ -18,6 +18,3 @@ export class DsGetCoordOffsetBatchController extends BaseController<DsGetCoordOf
     return super.set(data);
   }
 }
-
-
-
