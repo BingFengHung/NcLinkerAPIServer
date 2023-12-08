@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
+import { basePath } from './basePath';
 
-const fullPath = path.join(__dirname, "../data")
+const fullPath = path.join(basePath, "data")
 
 try {
   if (!fs.existsSync(fullPath)) {
