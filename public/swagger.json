@@ -22,12 +22,17 @@
 					"axisFlag": {
 						"type": "number",
 						"format": "double"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
 					}
 				},
 				"required": [
 					"gn",
 					"oset",
-					"axisFlag"
+					"axisFlag",
+					"return"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -65,12 +70,17 @@
 					"axisFlag": {
 						"type": "number",
 						"format": "double"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
 					}
 				},
 				"required": [
 					"gn",
 					"oset",
-					"axisFlag"
+					"axisFlag",
+					"return"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -202,6 +212,250 @@
 				"required": [
 					"Ost",
 					"axisFlag",
+					"return"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DsGetAxisName": {
+				"properties": {
+					"n": {
+						"type": "number",
+						"format": "double"
+					},
+					"name": {
+						"type": "string"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"n",
+					"name",
+					"return"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DsGetAxisNameDsp": {
+				"properties": {
+					"n": {
+						"type": "number",
+						"format": "double"
+					},
+					"name": {
+						"type": "string"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"n",
+					"name",
+					"return"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DsGetLang": {
+				"properties": {
+					"lang": {
+						"type": "number",
+						"format": "double"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"lang",
+					"return"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DsGetNAxis": {
+				"properties": {
+					"n": {
+						"type": "number",
+						"format": "double"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"n",
+					"return"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DsGetPLCv": {
+				"properties": {
+					"plcv": {
+						"type": "string"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"plcv",
+					"return"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DsGetWMCurrent": {
+				"properties": {
+					"n": {
+						"type": "number",
+						"format": "double"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"n",
+					"return"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DsGetWMMax": {
+				"properties": {
+					"n": {
+						"type": "number",
+						"format": "double"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"n",
+					"return"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DsIsNoSrv": {
+				"properties": {
+					"n": {
+						"type": "number",
+						"format": "double"
+					},
+					"isNoSrv": {
+						"type": "boolean"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"n",
+					"isNoSrv",
+					"return"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DsIsRunning": {
+				"properties": {
+					"r": {
+						"type": "boolean"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"r",
+					"return"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DsIsStart": {
+				"properties": {
+					"r": {
+						"type": "number",
+						"format": "double"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"r",
+					"return"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DsSetLang": {
+				"properties": {
+					"lang": {
+						"type": "number",
+						"format": "double"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"lang",
+					"return"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DsSetWMCurrent": {
+				"properties": {
+					"n": {
+						"type": "number",
+						"format": "double"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"n",
+					"return"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DsSetWMMax": {
+				"properties": {
+					"n": {
+						"type": "number",
+						"format": "double"
+					},
+					"return": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"n",
 					"return"
 				],
 				"type": "object",
@@ -582,6 +836,604 @@
 						"application/json": {
 							"schema": {
 								"$ref": "#/components/schemas/DsSetWorkPieceExt"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/DsGetAxisName": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DsGetAxisName"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsGetAxisName"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/DsGetAxisNameDsp": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DsGetAxisNameDsp"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsGetAxisNameDsp"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/DsGetLang": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DsGetLang"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsGetLang"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/DsGetNAxis": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DsGetNAxis"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsGetNAxis"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/DsGetPLCv": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DsGetPLCv"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsGetPLCv"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/DsGetWMCurrent": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DsGetWMCurrent"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsGetWMCurrent"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/DsGetWMMax": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DsGetWMMax"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsGetWMMax"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/DsIsNoSrv": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DsIsNoSrv"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsIsNoSrv"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/DsIsRunning": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DsIsRunning"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsIsRunning"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/DsIsStart": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DsIsStart"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsIsStart"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/DsSetLang": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DsSetLang"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsSetLang"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/DsSetWMCurrent": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DsSetWMCurrent"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsSetWMCurrent"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/DsSetWMMax": {
+			"get": {
+				"operationId": "Get",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DsSetWMMax"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Set",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DsSetWMMax"
 							}
 						}
 					}

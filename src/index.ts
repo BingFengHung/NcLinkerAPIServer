@@ -16,7 +16,6 @@ app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-
 // 在開發環境中直接使用 __dirname 
 let options = { 
   swaggerOptions: { 
