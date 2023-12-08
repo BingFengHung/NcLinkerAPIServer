@@ -10,7 +10,7 @@
     "build": "tsc",
     "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec\"",
     "swagger": "tsoa spec",
-    "pkg": "pkg -t node18-win-x64 -o NcLinkerAPIServer dist/index.js"
+    "pkg": "pkg -t node18-win-x64 -o release/NcLinkerAPIServer dist/index.js"
   },
   "nodemonConfig": {
     "watch": [
