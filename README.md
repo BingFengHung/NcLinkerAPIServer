@@ -21,6 +21,9 @@ tsoa 是 TypeScript 在使用的自動化產生 swagger 文件工具，他能夠
 
 要注意，因為他是透過靜態分析的方式，所以無法解析動態產生的程式碼。
 
+## 打包成執行檔案
+npx pkg -t node18-win-x64 -o NcLinkerAPIServer .\dist\index.js
+
 ### Todo
 
 - [ ] 可以將想要測試的 API 定義在一個群組中方便進行測試
